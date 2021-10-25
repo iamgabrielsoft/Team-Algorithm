@@ -1,10 +1,12 @@
+import React from 'react';
+import Header  from "../components/Header";
+import HomeSection from '../components/homePage/HomeSection';
 
-
-const HomePage = () => {
+export default function HomePage() {
     return (
-        <h3>This is the Homepage</h3>
-    )
+        <>
+            <Header visible={true}/>
+            <HomeSection />
+        </>
+    );
 }
-
-
-export default HomePage; 

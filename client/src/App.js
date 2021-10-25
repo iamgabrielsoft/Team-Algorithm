@@ -1,4 +1,5 @@
-import ReactDOM from "react-dom";
+import React from "react";
+// import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 
@@ -7,9 +8,9 @@ import Login from "./Auth/Login";
 import HomePage from "./pages/Homepage";
 
 
-
 const App = () => {
-  <BrowserRouter>
+  return (
+    <BrowserRouter>
     <Switch>
       {/* add routes with layouts */}
       <Route path="/"  exact component={HomePage} />
@@ -24,8 +25,7 @@ const App = () => {
       <Redirect from="*" to="/" />
     </Switch>
   </BrowserRouter>
-
-
+  );
 }
 
 
