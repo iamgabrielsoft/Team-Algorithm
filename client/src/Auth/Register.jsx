@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Card } from "react-bootstrap";
+import { Container, Col, Card, Row } from "react-bootstrap";
 import Header from "../components/Header";
 import FormComponent from "../components/FormComponent";
 // import google_svg from "assets/img/google.svg"
@@ -13,14 +13,20 @@ export default function Register() {
     <>
      <Header visible={false}/>
      <br />
-      <Container>
-        <Col>
-          <Card style={{ width: '50rem' }}>
-            <Card.Body>
-              <FormComponent {...registerConfig} />
-            </Card.Body>
-          </Card>
-        </Col>
+     <Container>
+        <Row>
+            <Col>
+            </Col>
+            <Col>
+              <Card style={{ width: '50rem' }} border="success">
+                  <Card.Body>
+                    <FormComponent {...registerConfig} />
+                  </Card.Body>
+              </Card>        
+            </Col>
+            <Col>
+            </Col>       
+        </Row>
       </Container>
     </>
   );

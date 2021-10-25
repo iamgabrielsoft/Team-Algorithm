@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Card } from "react-bootstrap";
+import { Container, Col, Card, Row } from "react-bootstrap";
 // import { Link } from "react-router-dom";
 import FormComponent from "../components/FormComponent";
 import Header from "../components/Header";
@@ -15,13 +15,19 @@ export default function Login() {
      <Header visible={false}/>
      <br />
       <Container>
-        <Col>
-          <Card style={{ width: '50rem' }}>
-            <Card.Body>
-              <FormComponent {...loginConfig} />
-            </Card.Body>
-          </Card>
-        </Col>
+        <Row>
+            <Col>
+            </Col>
+            <Col>
+              <Card style={{ width: '50rem' }} border="success">
+                  <Card.Body>
+                    <FormComponent {...loginConfig} />
+                  </Card.Body>
+              </Card>        
+            </Col>
+            <Col>
+            </Col>       
+        </Row>
       </Container>
     </>
   );
